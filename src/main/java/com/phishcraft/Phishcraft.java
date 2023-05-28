@@ -2,6 +2,7 @@ package com.phishcraft;
 
 import com.mojang.logging.LogUtils;
 import com.phishcraft.fish.Icefish;
+import com.phishcraft.rods.IronFishingRod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
@@ -24,6 +25,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -45,6 +47,8 @@ public class Phishcraft
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
     public static final RegistryObject<Icefish> ICE_FISH = ITEMS.register("icefish", () -> new Icefish(new Item.Properties()));
+
+    public static final RegistryObject<IronFishingRod> IRON_FISHING_ROD = ITEMS.register("iron_fishing_rod", () -> new IronFishingRod(new Item.Properties()));
 
     public Phishcraft()
     {
@@ -74,9 +78,11 @@ public class Phishcraft
 
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
-        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
+        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(EXAMPLE_BLOCK_ITEM);
             event.accept(ICE_FISH);
+            event.accept(IRON_FISHING_ROD);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
