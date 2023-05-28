@@ -1,6 +1,8 @@
 package com.phishcraft;
 
 import com.mojang.logging.LogUtils;
+import com.phishcraft.fish.Icefish;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +44,8 @@ public class Phishcraft
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
 
+    public static final RegistryObject<Icefish> ICE_FISH = ITEMS.register("icefish", () -> new Icefish(new Item.Properties()));
+
     public Phishcraft()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -72,6 +76,7 @@ public class Phishcraft
     {
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
+            event.accept(ICE_FISH);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
