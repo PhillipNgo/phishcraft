@@ -4,6 +4,10 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import com.phishcraft.item.fish.IcefishItem;
+import com.phishcraft.item.fish.LavafishItem;
+import com.phishcraft.item.fish.SandfishItem;
+import com.phishcraft.item.fish.SwordfishItem;
+import com.phishcraft.item.rods.CopperFishingRodItem;
 import com.phishcraft.item.rods.IronFishingRodItem;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,10 +31,14 @@ public class Phishcraft {
 
     public static final Map<String, Supplier<? extends Block>> BLOCK_MAP = Map.of();
     public static final Map<String, Supplier<? extends Item>> FISH_MAP = Map.of(
-        "fish/icefish", IcefishItem::new
+        "fish/icefish", IcefishItem::new,
+        "fish/lavafish", LavafishItem::new,
+        "fish/sandfish", SandfishItem::new,
+        "fish/swordfish", SwordfishItem::new
     );
     public static final Map<String, Supplier<? extends Item>> ROD_MAP = Map.of(
-        "rods/iron_fishing_rod", IronFishingRodItem::new
+        "rods/iron_fishing_rod", IronFishingRodItem::new,
+        "rods/copper_fishing_rod", CopperFishingRodItem::new
     );
 
     static {

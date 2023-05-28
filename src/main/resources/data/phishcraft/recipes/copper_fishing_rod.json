@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:copper_ingot"
     },
     "X": {
       "item": "minecraft:string"
@@ -15,6 +15,6 @@
     "# X"
   ],
   "result": {
-    "item": "phishcraft:rods/iron_fishing_rod"
+    "item": "phishcraft:rods/copper_fishing_rod"
   }
 }
