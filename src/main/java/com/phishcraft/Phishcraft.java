@@ -34,9 +34,9 @@ public class Phishcraft {
     );
 
     static {
-        BLOCK_MAP.forEach((k, v) -> BLOCKS.register(k, v));
-        FISH_MAP.forEach((k, v) -> ITEMS.register(k, v));
-        ROD_MAP.forEach((k, v) -> ITEMS.register(k, v));
+        BLOCK_MAP.forEach(BLOCKS::register);
+        FISH_MAP.forEach(ITEMS::register);
+        ROD_MAP.forEach(ITEMS::register);
     }
 
     public Phishcraft() {
