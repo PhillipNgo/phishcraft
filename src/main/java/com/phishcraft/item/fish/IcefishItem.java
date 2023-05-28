@@ -1,13 +1,13 @@
-package com.phishcraft.fish;
+package com.phishcraft.item.fish;
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 
-public class Icefish extends Item {
+public class IcefishItem extends Item {
 
-  public Icefish(Properties properties) {
-    super(properties.food(
+  public IcefishItem() {
+    super((new Item.Properties()).food(
         (new FoodProperties.Builder()
             .saturationMod(Foods.COD.getSaturationModifier())
             .nutrition(Foods.COD.getNutrition())

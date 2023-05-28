@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/handheld_rod",
     "textures": {
-        "layer0": "phishcraft:item/copper_fishing_rod"
+        "layer0": "phishcraft:item/rods/iron_fishing_rod"
     },
     "overrides": [
         {

@@ -1,7 +1,7 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "phishcraft:item/swordfish"
+        "layer0": "phishcraft:item/fish/icefish"
     },
     "display": {
         "head": {
