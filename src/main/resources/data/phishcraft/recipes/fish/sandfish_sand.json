@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    {
+      "item": "phishcraft:fish/sandfish"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:sand"
+  }
+}
