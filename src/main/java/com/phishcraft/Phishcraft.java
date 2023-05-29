@@ -7,8 +7,12 @@ import com.phishcraft.item.fish.IcefishItem;
 import com.phishcraft.item.fish.LavafishItem;
 import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
+import com.phishcraft.item.rods.BlazeFishingRodItem;
 import com.phishcraft.item.rods.CopperFishingRodItem;
+import com.phishcraft.item.rods.EmeraldFishingRodItem;
+import com.phishcraft.item.rods.GoldFishingRodItem;
 import com.phishcraft.item.rods.IronFishingRodItem;
+import com.phishcraft.item.rods.ObsidianFishingRodItem;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -38,7 +42,11 @@ public class Phishcraft {
     );
     public static final Map<String, Supplier<? extends Item>> ROD_MAP = Map.of(
         "rods/iron_fishing_rod", IronFishingRodItem::new,
-        "rods/copper_fishing_rod", CopperFishingRodItem::new
+        "rods/copper_fishing_rod", CopperFishingRodItem::new,
+        "rods/emerald_fishing_rod", EmeraldFishingRodItem::new,
+        "rods/gold_fishing_rod", GoldFishingRodItem::new,
+        "rods/blaze_fishing_rod", BlazeFishingRodItem::new,
+        "rods/obsidian_fishing_rod", ObsidianFishingRodItem::new
     );
 
     static {
