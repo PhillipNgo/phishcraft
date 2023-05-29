@@ -1,6 +1,5 @@
 {
     "type": "minecraft:crafting_shapeless",
-    "category": "spawn-egg",
     "ingredients": [
       {
         "item": "phishcraft:fish/beefish"
