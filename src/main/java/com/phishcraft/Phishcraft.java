@@ -8,6 +8,7 @@ import com.phishcraft.item.fish.IcefishItem;
 import com.phishcraft.item.fish.LavafishItem;
 import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
+import com.phishcraft.item.food.CaviarItem;
 import com.phishcraft.item.food.EventOnFoodEat;
 import com.phishcraft.item.rods.FishingRodHandler;
 
@@ -40,10 +41,14 @@ public class Phishcraft {
         "fish/sandfish", SandfishItem::new,
         "fish/swordfish", SwordfishItem::new
     );
+    public static final Map<String, Supplier<? extends Item>> FOOD_MAP = Map.of(
+        "food/caviar", CaviarItem::new
+    );
 
     static {
         BLOCK_MAP.forEach(BLOCKS::register);
         FISH_MAP.forEach(ITEMS::register);
+        FOOD_MAP.forEach(ITEMS::register);
     }
 
     public Phishcraft() {
