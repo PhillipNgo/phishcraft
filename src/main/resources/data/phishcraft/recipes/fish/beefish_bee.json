@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "phishcraft:fish/beefish"
+      }
+    ],
+    "result": {
+      "count": 1,
+      "item": "minecraft:bee_spawn_egg"
+    }
+  }
