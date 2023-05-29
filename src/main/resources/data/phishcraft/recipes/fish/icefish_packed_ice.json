@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "blocks",
+  "ingredients": [
+    {
+      "item": "phishcraft:fish/icefish"
+    },
+    {
+      "item": "phishcraft:fish/icefish"
+    },
+    {
+      "item": "phishcraft:fish/icefish"
+    },
+    {
+      "item": "phishcraft:fish/icefish"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:packed_ice"
+  }
+}
