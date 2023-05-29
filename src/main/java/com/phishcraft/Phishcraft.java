@@ -7,12 +7,7 @@ import com.phishcraft.item.fish.IcefishItem;
 import com.phishcraft.item.fish.LavafishItem;
 import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
-import com.phishcraft.item.rods.BlazeFishingRodItem;
-import com.phishcraft.item.rods.CopperFishingRodItem;
-import com.phishcraft.item.rods.EmeraldFishingRodItem;
-import com.phishcraft.item.rods.GoldFishingRodItem;
-import com.phishcraft.item.rods.IronFishingRodItem;
-import com.phishcraft.item.rods.ObsidianFishingRodItem;
+import com.phishcraft.item.rods.FishingRodHandler;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -21,9 +16,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod(Phishcraft.MODID)
 public class Phishcraft {
@@ -40,27 +37,30 @@ public class Phishcraft {
         "fish/sandfish", SandfishItem::new,
         "fish/swordfish", SwordfishItem::new
     );
-    public static final Map<String, Supplier<? extends Item>> ROD_MAP = Map.of(
-        "rods/iron_fishing_rod", IronFishingRodItem::new,
-        "rods/copper_fishing_rod", CopperFishingRodItem::new,
-        "rods/emerald_fishing_rod", EmeraldFishingRodItem::new,
-        "rods/gold_fishing_rod", GoldFishingRodItem::new,
-        "rods/blaze_fishing_rod", BlazeFishingRodItem::new,
-        "rods/obsidian_fishing_rod", ObsidianFishingRodItem::new
-    );
 
     static {
         BLOCK_MAP.forEach(BLOCKS::register);
         FISH_MAP.forEach(ITEMS::register);
-        ROD_MAP.forEach(ITEMS::register);
     }
 
     public Phishcraft() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::addCreative);
+
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
-        modEventBus.addListener(this::addCreative);
+    }
+
+    public static <T extends Item> RegistryObject<T> registerItem(String model, Supplier<? extends T> item) {
+        return ITEMS.register(model, item);
+    }
+
+    private void setup(FMLClientSetupEvent event) {
+        event.enqueueWork(FishingRodHandler::setup);
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
