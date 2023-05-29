@@ -23,7 +23,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 
 @Mod(Phishcraft.MODID)
 public class Phishcraft {
@@ -64,18 +63,14 @@ public class Phishcraft {
         MinecraftForge.EVENT_BUS.register(new EventOnFoodEat());
     }
 
-    public static <T extends Item> RegistryObject<T> registerItem(String model, Supplier<? extends T> item) {
-        return ITEMS.register(model, item);
-    }
-
     private void setup(FMLClientSetupEvent event) {
         event.enqueueWork(FishingRodHandler::setup);
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-            BLOCKS.getEntries().forEach(block -> event.accept(block));
-            ITEMS.getEntries().forEach(item -> event.accept(item));
+            BLOCKS.getEntries().forEach(event::accept);
+            ITEMS.getEntries().forEach(event::accept);
         }
     }
 }

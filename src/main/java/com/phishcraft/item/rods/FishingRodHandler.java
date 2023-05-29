@@ -16,14 +16,14 @@ import net.minecraftforge.registries.RegistryObject;
 public class FishingRodHandler {
 
   public static final List<RegistryObject<FishingRodItem>> FISHING_RODS = List.of(
-      Phishcraft.registerItem("rods/iron_fishing_rod", IronFishingRodItem::new),
-      Phishcraft.registerItem("rods/copper_fishing_rod", CopperFishingRodItem::new),
-      Phishcraft.registerItem("rods/emerald_fishing_rod", EmeraldFishingRodItem::new),
-      Phishcraft.registerItem("rods/gold_fishing_rod", GoldFishingRodItem::new),
-      Phishcraft.registerItem("rods/blaze_fishing_rod", BlazeFishingRodItem::new),
-      Phishcraft.registerItem("rods/obsidian_fishing_rod", ObsidianFishingRodItem::new),
-      Phishcraft.registerItem("rods/diamond_fishing_rod", DiamondFishingRodItem::new),
-      Phishcraft.registerItem("rods/netherite_fishing_rod", NetheriteFishingRodItem::new));
+      Phishcraft.ITEMS.register("rods/iron_fishing_rod", IronFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/copper_fishing_rod", CopperFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/emerald_fishing_rod", EmeraldFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/gold_fishing_rod", GoldFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/blaze_fishing_rod", BlazeFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/obsidian_fishing_rod", ObsidianFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/diamond_fishing_rod", DiamondFishingRodItem::new),
+      Phishcraft.ITEMS.register("rods/netherite_fishing_rod", NetheriteFishingRodItem::new));
 
   public static void setup() {
     FISHING_RODS.forEach(fishingRod -> registerFishingRodModelProperties(fishingRod.get()));
