@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/handheld_rod",
     "textures": {
-        "layer0": "phishcraft:item/rods/fishing_rod_cast"
+        "layer0": "phishcraft:item/rods/gold_fishing_rod_cast"
     }
 }
