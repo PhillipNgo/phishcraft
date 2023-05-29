@@ -8,6 +8,7 @@ import com.phishcraft.item.fish.IcefishItem;
 import com.phishcraft.item.fish.LavafishItem;
 import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
+import com.phishcraft.item.food.EventOnFoodEat;
 import com.phishcraft.item.rods.FishingRodHandler;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -55,6 +56,7 @@ public class Phishcraft {
         ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(new EventOnFoodEat());
     }
 
     public static <T extends Item> RegistryObject<T> registerItem(String model, Supplier<? extends T> item) {
