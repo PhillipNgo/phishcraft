@@ -9,9 +9,11 @@ import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
 import com.phishcraft.item.rods.BlazeFishingRodItem;
 import com.phishcraft.item.rods.CopperFishingRodItem;
+import com.phishcraft.item.rods.DiamondFishingRodItem;
 import com.phishcraft.item.rods.EmeraldFishingRodItem;
 import com.phishcraft.item.rods.GoldFishingRodItem;
 import com.phishcraft.item.rods.IronFishingRodItem;
+import com.phishcraft.item.rods.NetheriteFishingRodItem;
 import com.phishcraft.item.rods.ObsidianFishingRodItem;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -46,7 +48,9 @@ public class Phishcraft {
         "rods/emerald_fishing_rod", EmeraldFishingRodItem::new,
         "rods/gold_fishing_rod", GoldFishingRodItem::new,
         "rods/blaze_fishing_rod", BlazeFishingRodItem::new,
-        "rods/obsidian_fishing_rod", ObsidianFishingRodItem::new
+        "rods/obsidian_fishing_rod", ObsidianFishingRodItem::new,
+        "rods/diamond_fishing_rod", DiamondFishingRodItem::new,
+        "rods/netherite_fishing_rod", NetheriteFishingRodItem::new
     );
 
     static {

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item":"phishcraft:item/rods/diamond_fishing_rod"
+  },
+  "addition": {
+    "item":"minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "phishcraft:item/rods/netherite_fishing_rod"
+  }
+}
