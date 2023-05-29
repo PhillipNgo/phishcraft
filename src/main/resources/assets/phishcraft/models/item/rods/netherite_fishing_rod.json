@@ -8,7 +8,7 @@
             "predicate": {
                 "cast": 1
             },
-            "model": "minecraft:item/netherite_fishing_rod_cast"
+            "model": "phishcraft:item/rods/netherite_fishing_rod_cast"
         }
     ]
 }

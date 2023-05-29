@@ -21,7 +21,9 @@ public class FishingRodHandler {
       Phishcraft.registerItem("rods/emerald_fishing_rod", EmeraldFishingRodItem::new),
       Phishcraft.registerItem("rods/gold_fishing_rod", GoldFishingRodItem::new),
       Phishcraft.registerItem("rods/blaze_fishing_rod", BlazeFishingRodItem::new),
-      Phishcraft.registerItem("rods/obsidian_fishing_rod", ObsidianFishingRodItem::new));
+      Phishcraft.registerItem("rods/obsidian_fishing_rod", ObsidianFishingRodItem::new),
+      Phishcraft.registerItem("rods/diamond_fishing_rod", DiamondFishingRodItem::new),
+      Phishcraft.registerItem("rods/netherite_fishing_rod", NetheriteFishingRodItem::new));
 
   public static void setup() {
     FISHING_RODS.forEach(fishingRod -> registerFishingRodModelProperties(fishingRod.get()));
