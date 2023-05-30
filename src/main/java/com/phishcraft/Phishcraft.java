@@ -34,15 +34,13 @@ public class Phishcraft {
 
     public static final Map<String, Supplier<? extends Block>> BLOCK_MAP = Map.of();
     public static final Map<String, Supplier<? extends Item>> FISH_MAP = Map.of(
-        "fish/beefish", BeefishItem::new,
-        "fish/icefish", IcefishItem::new,
-        "fish/lavafish", LavafishItem::new,
-        "fish/sandfish", SandfishItem::new,
-        "fish/swordfish", SwordfishItem::new
-    );
+            "fish/beefish", BeefishItem::new,
+            "fish/icefish", IcefishItem::new,
+            "fish/lavafish", LavafishItem::new,
+            "fish/sandfish", SandfishItem::new,
+            "fish/swordfish", SwordfishItem::new);
     public static final Map<String, Supplier<? extends Item>> FOOD_MAP = Map.of(
-        "food/caviar", CaviarItem::new
-    );
+            "food/caviar", CaviarItem::new);
 
     static {
         BLOCK_MAP.forEach(BLOCKS::register);

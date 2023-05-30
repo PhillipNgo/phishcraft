@@ -7,13 +7,13 @@ import net.minecraft.world.item.Item;
 
 public class CaviarItem extends FoodItem {
 
-    public static final int XP_BOOST = 50;
+  public static final int XP_BOOST = 50;
 
   public CaviarItem() {
     super((new Item.Properties()).food(
         (new FoodProperties.Builder()
-            .saturationMod(Foods.COD.getSaturationModifier())
-            .nutrition(Foods.COD.getNutrition())
+            .saturationMod(Foods.GOLDEN_CARROT.getSaturationModifier())
+            .nutrition(Foods.GOLDEN_CARROT.getNutrition())
             .alwaysEat()
             .build())));
   }
