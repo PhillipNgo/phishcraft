@@ -9,6 +9,7 @@ import com.phishcraft.item.fish.LavafishItem;
 import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
 import com.phishcraft.item.food.EventOnFoodEat;
+import com.phishcraft.item.fuel.EventFurnaceFuelBurn;
 import com.phishcraft.item.rods.FishingRodHandler;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -55,6 +56,7 @@ public class Phishcraft {
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(new EventOnFoodEat());
+        MinecraftForge.EVENT_BUS.register(new EventFurnaceFuelBurn());
     }
 
     private void setup(FMLClientSetupEvent event) {
