@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 import com.phishcraft.item.PhishcraftItems;
-import com.phishcraft.item.food.EventOnFoodEat;
+import com.phishcraft.item.food.EventOnFoodEaten;
 import com.phishcraft.item.fuel.EventFurnaceFuelBurn;
 import com.phishcraft.item.rods.FishingRodHandler;
 
@@ -42,7 +42,7 @@ public class Phishcraft {
         PhishcraftItems.ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(new EventOnFoodEat());
+        MinecraftForge.EVENT_BUS.register(new EventOnFoodEaten());
         MinecraftForge.EVENT_BUS.register(new EventFurnaceFuelBurn());
     }
 

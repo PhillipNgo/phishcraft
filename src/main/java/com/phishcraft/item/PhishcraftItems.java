@@ -5,7 +5,6 @@ import com.phishcraft.item.fish.BeefishItem;
 import com.phishcraft.item.fish.GenericFishItem;
 import com.phishcraft.item.fish.IcefishItem;
 import com.phishcraft.item.fish.LavafishItem;
-import com.phishcraft.item.fish.SandfishItem;
 import com.phishcraft.item.fish.SwordfishItem;
 import com.phishcraft.item.food.CaviarItem;
 import com.phishcraft.item.rods.BlazeFishingRodItem;
@@ -50,6 +49,7 @@ public class PhishcraftItems {
   public static RegistryObject<GenericFishItem> LIONFISH = ITEMS.register("fish/lionfish",
       GenericFishItem::new);
   public static RegistryObject<GenericFishItem> PIKE = ITEMS.register("fish/pike", GenericFishItem::new);
+  public static RegistryObject<GenericFishItem> SANDFISH = ITEMS.register("fish/sandfish", GenericFishItem::new);
   public static RegistryObject<GenericFishItem> SARDINE = ITEMS.register("fish/sardine",
       GenericFishItem::new);
   public static RegistryObject<GenericFishItem> SCORPION_CARP = ITEMS.register("fish/scorpion_carp",
@@ -71,7 +71,6 @@ public class PhishcraftItems {
       IcefishItem::new);
   public static RegistryObject<LavafishItem> LAVAFISH = ITEMS.register("fish/lavafish",
       LavafishItem::new);
-  public static RegistryObject<SandfishItem> SANDFISH = ITEMS.register("fish/sandfish", SandfishItem::new);
   public static RegistryObject<SwordfishItem> SWORDFISH = ITEMS.register("fish/swordfish",
       SwordfishItem::new);
 

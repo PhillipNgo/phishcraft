@@ -6,9 +6,9 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-public class EventOnFoodEat {
+public class EventOnFoodEaten {
 
-  public EventOnFoodEat() {}
+  public EventOnFoodEaten() {}
 
   @SubscribeEvent
   public void onItemUseFinish(LivingEntityUseItemEvent.Finish event) {
@@ -17,9 +17,9 @@ public class EventOnFoodEat {
       return;
     }
     Item item = event.getItem().getItem();
-    if (item == null || !(item instanceof FoodItem)) {
+    if (item == null || !(item instanceof IHasOnFoodEaten)) {
       return;
     }
-    ((FoodItem) item).onFoodEaten((Player) entity);
+    ((IHasOnFoodEaten) item).onFoodEaten((Player) entity);
   }
 }
