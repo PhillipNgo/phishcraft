@@ -3,6 +3,7 @@ package com.phishcraft.item.rods;
 import java.util.List;
 
 import com.phishcraft.Phishcraft;
+import com.phishcraft.item.PhishcraftItems;
 
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -15,15 +16,15 @@ import net.minecraftforge.registries.RegistryObject;
 @Mod.EventBusSubscriber(modid = Phishcraft.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class FishingRodHandler {
 
-  public static final List<RegistryObject<FishingRodItem>> FISHING_RODS = List.of(
-      Phishcraft.ITEMS.register("rods/iron_fishing_rod", IronFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/copper_fishing_rod", CopperFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/emerald_fishing_rod", EmeraldFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/gold_fishing_rod", GoldFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/blaze_fishing_rod", BlazeFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/obsidian_fishing_rod", ObsidianFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/diamond_fishing_rod", DiamondFishingRodItem::new),
-      Phishcraft.ITEMS.register("rods/netherite_fishing_rod", NetheriteFishingRodItem::new));
+  public static final List<RegistryObject<? extends FishingRodItem>> FISHING_RODS = List.of(
+      PhishcraftItems.IRON_FISHING_ROD,
+      PhishcraftItems.COPPER_FISHING_ROD,
+      PhishcraftItems.EMERALD_FISHING_ROD,
+      PhishcraftItems.GOLD_FISHING_ROD,
+      PhishcraftItems.BLAZE_FISHING_ROD,
+      PhishcraftItems.OBSIDIAN_FISHING_ROD,
+      PhishcraftItems.DIAMOND_FISHING_ROD,
+      PhishcraftItems.NETHERITE_FISHING_ROD);
 
   public static void setup() {
     FISHING_RODS.forEach(fishingRod -> registerFishingRodModelProperties(fishingRod.get()));
