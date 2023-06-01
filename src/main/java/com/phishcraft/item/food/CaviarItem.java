@@ -5,7 +5,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 
-public class CaviarItem extends FoodItem {
+public class CaviarItem extends Item implements IHasOnFoodEaten {
 
   public static final int XP_BOOST = 50;
 
